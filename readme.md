@@ -42,7 +42,7 @@ sudo docker-compose up
 
 5. Altere as variáveis de ambiente que estão no início dos scripts `tp1_3.2.py` e `tp1_3.3.py` de acordo com a configuração do seu banco de dados. Mantenha os valores default caso esteja utilizando o Postgres com o `docker-compose.yml` fornecido.
 
-| Nome    |`Default     |
+| Nome    | Default     |
 | ------- | ----------- |
 | DB_HOST | `localhost` |
 | DB_PORT | `5437`      |
