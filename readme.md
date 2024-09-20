@@ -28,7 +28,7 @@ Caso você queira usar o docker para executar nosso programa isso também é pos
 Siga as instruções abaixo para que o projeto execute perfeitamente em sua maquina local.
 1. Clone o repositório através do comnado:
 ```bash
-git clone git@github.com:bd1-icomp-ufam/trabalho-pr-tico-i-bancos-de-dados-1-tp1-ricardo_eliel-karen_hapuque.git
+git clone https://github.com/bd1-icomp-ufam/trabalho-pr-tico-i-bancos-de-dados-1-tp1-ricardo_eliel-karen_hapuque.git
 ```
 2. Baixe o arquivo Amazon product co-purchasing network metadata
 Para baixar esse arquivo é necessário que você acesse o link a seguir: https://snap.stanford.edu/data/amazon-meta.html e baixe o arquivo amazon-meta.txt.gz  
