@@ -45,7 +45,7 @@ sudo docker-compose up
 | Nome    | Default     |
 | ------- | ----------- |
 | DB_HOST | `localhost` |
-| DB_PORT | `5437`      |
+| DB_PORT | `5432`      |
 | DB_NAME | `database`  |
 | DB_USER | `username`  |
 | DB_PASS | `password`  |
