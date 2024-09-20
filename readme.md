@@ -6,11 +6,9 @@ Karen Hapuque Ferreira Ponce de Leão 22250541
 
 ## Sumário
 
-- [Pré-Instalação](#configuração)
+- [Configuração](#configuração)
 - [Instalação](#instalação)
-- [Uso](#uso)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
+- [execução](#execução)
 
 ## Configuração 
 Para que sua máquina execute nosso código sem problema algum, é necessário que você execute os seguintes comandos:
@@ -50,7 +48,7 @@ sudo docker-compose up
 | DB_NAME | `database`  |
 
 
-### Execução
+## Execução
 1. Extraia o arquivo amazon-meta.txt.gz.
 
 1. Execute o script `tp1_3.2.py` junto do arquivo `amazon-meta.txt` para extrair os dados do arquivo e popular o banco de dados.
