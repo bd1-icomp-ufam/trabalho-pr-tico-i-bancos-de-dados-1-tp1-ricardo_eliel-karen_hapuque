@@ -24,7 +24,7 @@ Caso você queira usar o docker para executar nosso programa isso também é pos
 ## Instalação
 
 Siga as instruções abaixo para que o projeto execute perfeitamente em sua maquina local.
-1. Clone o repositório através do comnado:
+1. Clone o repositório através do comando:
 ```bash
 git clone https://github.com/bd1-icomp-ufam/trabalho-pr-tico-i-bancos-de-dados-1-tp1-ricardo_eliel-karen_hapuque.git
 ```
