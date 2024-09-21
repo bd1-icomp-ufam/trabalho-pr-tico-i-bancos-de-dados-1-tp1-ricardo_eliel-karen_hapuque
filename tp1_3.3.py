@@ -1,5 +1,14 @@
-from bd import connect_to_db
+import importlib.util
 from tabulate import tabulate
+
+# Defina o caminho do arquivo
+spec = importlib.util.spec_from_file_location("tp1_3_2", "./tp1_3.2.py")
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+
+# Agora você pode acessar o conteúdo do módulo
+connect_to_db = module.connect_to_db
+
 
 
 host = 'localhost'
@@ -261,6 +270,31 @@ def option_7(cur):
     except Exception as e:
         print(f"Ocorreu um erro ao consultar os dados: {e}")
 
+def option_8(cur):
+    consult_query = """
+        SELECT *
+        FROM PRODUCT
+        ORDER BY SALERANK
+        LIMIT 10;
+    """
+
+    try:
+        # Executar comando de consulta
+        cur.execute(consult_query)
+        results = cur.fetchall()
+
+        # Verificar se resultados foram retornados
+        if results:
+            # Exibir os resultados com tabulate
+            headers = ["ASSIN", "Title", "Group", "Salerank"]
+            print(tabulate(results, headers=headers, tablefmt="grid"))
+        else:
+            print("Nenhum resultado encontrado.")
+    except Exception as e:
+        print(f"Ocorreu um erro ao consultar as categorias: {e}")
+
+
+
 
 if __name__ == '__main__':
     con = connect_to_db(host, user, password, db_name)
@@ -276,6 +310,7 @@ if __name__ == '__main__':
         print("5 - Listar os 10 produtos com a maior média de avaliações úteis positivas por produto")
         print("6 - Listar as 5 categorias de produto com a maior média de avaliações úteis positivas por produto")
         print("7 - Listar os 10 clientes que mais fizeram comentários por grupo de produto")
+        print("8 - Listar 10 produtos com melhores salerank")
         print("0 - Fechar Progama")
         option = int(input("Selecione uma das Opções:"))
 
@@ -308,6 +343,9 @@ if __name__ == '__main__':
                 print("\n\n")
             case 7:
                 option_7(cur)
+                print("\n\n")
+            case 8:
+                option_8(cur)
                 print("\n\n")
             case _:
                 print("Opção inválida, escolhe uma opção válida")
